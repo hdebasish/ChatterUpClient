@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./styles/login_style.css" />
+    <script
+      src="https://kit.fontawesome.com/1226568128.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body onload="renderChats()">
+    <div class="container">
+      <div class="wrapper">
+        <div class="signup">
+          <div class="video-container">
+            <video autoplay loop muted>
+              <source src="./media/videos/sea.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="quote">
+            <h1>Let's sail through the waves of conversation</h1>
+            <p>Explore the depths of our thoughts</p>
+          </div>
+          <div class="signup-btn-wrapper" id="signup-toggle">
+            <div class="btn-backdrop"></div>
+            <p class="signup-prompt">Don't have an account?</p>
+            <button class="singnup-btn" onclick="renderSignUp()">
+              Sign Up
+            </button>
+          </div>
+          <div class="signup-btn-wrapper hide" id="signin-toggle">
+            <div class="btn-backdrop"></div>
+            <p class="signup-prompt">Already have an account?</p>
+            <button class="singnup-btn" onclick="renderSignIn()">
+              Sign In
+            </button>
+          </div>
+        </div>
+        <div class="signin">
+          <div class="signin-container" id="signin-id">
+            <img id="logo" src="./media/images/chat.png" alt="" />
+            <h1 class="welcome-message">Welcome Back!</h1>
+            <form class="login-form" id="login-form-id">
+              <div class="username-wrapper">
+                <div>
+                  <label for="username">Username</label>
+                </div>
+                <div class="input-username">
+                  <input
+                    class="login-input"
+                    type="text"
+                    name="username"
+                    placeholder="Enter Username"
+                    id="signin-username"
+                    required
+                  />
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </div>
+              <div class="password-wrapper">
+                <div>
+                  <label for="password">Password</label>
+                </div>
+                <div class="input-password">
+                  <input
+                    class="login-input"
+                    type="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    id="signin-password"
+                    required
+                  />
+                  <i class="fa-solid fa-lock"></i>
+                </div>
+              </div>
+              <div class="login-button-wrapper">
+                <input type="submit" class="submit" value="Log In" />
+              </div>
+              <div>
+                <p class="forgot-pass">
+                  Forgot Your Password? <a href="">Click Here</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="signup-container hide" id="signup-id">
+            <img id="signup-logo" src="./media/images/chat.png" alt="" />
+            <h1 class="signup-message">Create account</h1>
+            <form class="login-form" id="signup-form-id">
+              <div class="signup-wrapper">
+                <div>
+                  <label for="username">Username</label>
+                </div>
+                <div class="input-username">
+                  <input
+                    class="login-input"
+                    type="text"
+                    placeholder="Enter Username"
+                    name="username"
+                    id="signup-username"
+                  />
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </div>
+              <div class="username-wrapper">
+                <div>
+                  <label for="username">Email</label>
+                </div>
+                <div class="input-username">
+                  <input
+                    class="login-input"
+                    type="email"
+                    placeholder="Enter Email"
+                    name="email"
+                    id="signup-email"
+                  />
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+              </div>
+              <div class="gender-wrapper">
+                <div>
+                  <label for="gender">Gender</label>
+                </div>
+                <div class="input-username">
+                  <span class="gender"
+                    >Male:<input
+                      type="radio"
+                      id="male"
+                      name="gender"
+                      value="male"
+                  /></span>
+                  <span class="gender"
+                    >Female:<input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                  /></span>
+                </div>
+              </div>
+              <div class="password-wrapper">
+                <div>
+                  <label for="password">Password</label>
+                </div>
+                <div class="input-password">
+                  <input
+                    class="login-input"
+                    type="password"
+                    placeholder="Enter Password"
+                    name="password"
+                    id="signup-password"
+                  />
+                  <i class="fa-solid fa-lock"></i>
+                </div>
+              </div>
+              <div class="login-button-wrapper">
+                <input type="submit" class="submit" value="Sign Up" />
+              </div>
+              <div></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/login_script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>

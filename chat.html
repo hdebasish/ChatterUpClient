@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1226568128.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/chat_style.css" />
+    <title>ChatterUp</title>
+  </head>
+  <body onload="fetchUserInfo()">
+    <div class="container">
+      <div class="chat-interface">
+        <div class="notification">
+          <div class="welcome-message">
+            <div class="welcome-message-online-wrapper">
+              <div class="green-dot-welcome"></div>
+              <div class="welcome-text">
+                <div class="welcome-user-name" id="welcome-user-name-id"></div>
+                <div class="sender-status" id="sender-status-id"></div>
+              </div>
+            </div>
+            <div id="logout">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+          </div>
+        </div>
+        <div class="chat" id="chat-id"></div>
+        <div class="input">
+          <span
+            ><input
+              type="text"
+              name=""
+              id="input-text"
+              placeholder="Type a message"
+            /><button id="input-button" class="button">Send</button></span
+          >
+        </div>
+      </div>
+
+      <div class="chat-users">
+        <div class="online-user-status">
+          <p id="online-user-id">Online Users 1</p>
+          <ul id="connected-users">
+            <li class="online-user">
+              <div class="green-dot-wrapper"><div class="green-dot"></div></div>
+              <div class="online-user-name">You</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+
+    <script src="./scripts/chat_script.js"></script>
+  </body>
+</html>
